@@ -121,3 +121,6 @@ data/tdai-memory.db
 # Test coverage output
 coverage/
 **/coverage/
+branch_structure.json
+temp_auto_push.bat
+temp_interactive_push.bat
