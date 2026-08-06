@@ -1,15 +1,15 @@
 {
   "name": "team-memory-control",
   "version": "0.1.0",
-  "description": "团队记忆管控平台 - 管理 team/user/agent/task 与四类资产",
+  "description": "\u56e2\u961f\u8bb0\u5fc6\u7ba1\u63a7\u5e73\u53f0 - \u7ba1\u7406 team/user/agent/task \u4e0e\u56db\u7c7b\u8d44\u4ea7",
   "type": "module",
   "engines": {
     "node": ">=22"
   },
   "scripts": {
-    "dev": "tsx watch src/index.ts",
-    "build": "tsc",
-    "start": "node dist/index.js",
+    "dev": "node init && tsx watch src/index.ts",
+    "build": "node init && tsc",
+    "start": "node init && node dist/index.js",
     "typecheck": "tsc --noEmit",
     "test": "vitest run",
     "test:watch": "vitest",

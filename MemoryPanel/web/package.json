@@ -4,9 +4,9 @@
   "version": "0.1.0",
   "type": "module",
   "scripts": {
-    "dev": "vite",
+    "dev": "node init && vite",
     "mock": "VITE_ENTRY=mock vite",
-    "build": "tsc && vite build",
+    "build": "node init && tsc && vite build",
     "preview": "vite preview",
     "lint": "eslint src --ext .ts,.tsx --fix",
     "lint:check": "eslint src --ext .ts,.tsx",

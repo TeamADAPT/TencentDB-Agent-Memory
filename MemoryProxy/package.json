@@ -4,10 +4,10 @@
   "description": "Lightweight LLM request forwarding proxy with JSONL logging and Opik tracing",
   "type": "module",
   "scripts": {
-    "start": "node --import tsx/esm src/index.ts",
-    "start:config": "node --import tsx/esm src/index.ts --config config.yaml",
-    "dev": "node --import tsx/esm --watch src/index.ts",
-    "dev:config": "node --import tsx/esm --watch src/index.ts --config config.yaml",
+    "start": "node init && node --import tsx/esm src/index.ts",
+    "start:config": "node init && node --import tsx/esm src/index.ts --config config.yaml",
+    "dev": "node init && node --import tsx/esm --watch src/index.ts",
+    "dev:config": "node init && node --import tsx/esm --watch src/index.ts --config config.yaml",
     "test": "vitest run",
     "test:watch": "vitest"
   },

@@ -1,7 +1,7 @@
 {
   "name": "@tencentdb-agent-memory/memory-tencentdb-v2",
   "version": "2.0.0-beta.1",
-  "description": "Four-layer local memory system plugin for OpenClaw — auto-captures, structures, and profiles conversational knowledge using local LLM + SQLite vector search (L0→L1→L2→L3 pipeline)",
+  "description": "Four-layer local memory system plugin for OpenClaw \u2014 auto-captures, structures, and profiles conversational knowledge using local LLM + SQLite vector search (L0\u2192L1\u2192L2\u2192L3 pipeline)",
   "type": "module",
   "main": "./dist/index.mjs",
   "bin": {
@@ -16,17 +16,17 @@
     }
   },
   "scripts": {
-    "build": "npm run build:plugin && npm run build:scripts",
-    "build:plugin": "tsdown",
-    "build:scripts": "npm run build:migrate-sqlite-to-vdb && npm run build:export-tencent-vdb && npm run build:read-local-memory && npm run build:seed-v2",
+    "build": "node init && npm run build:plugin && npm run build:scripts",
+    "build:plugin": "node init && tsdown",
+    "build:scripts": "node init && npm run build:migrate-sqlite-to-vdb && npm run build:export-tencent-vdb && npm run build:read-local-memory && npm run build:seed-v2",
     "prepack": "npm run build",
-    "build:migrate-sqlite-to-vdb": "tsc -p scripts/migrate-sqlite-to-tcvdb/tsconfig.json --noEmitOnError false",
+    "build:migrate-sqlite-to-vdb": "node init && tsc -p scripts/migrate-sqlite-to-tcvdb/tsconfig.json --noEmitOnError false",
     "migrate-sqlite-to-tcvdb": "node ./bin/migrate-sqlite-to-tcvdb.mjs",
-    "build:export-tencent-vdb": "tsc --project scripts/export-tencent-vdb/tsconfig.json",
+    "build:export-tencent-vdb": "node init && tsc --project scripts/export-tencent-vdb/tsconfig.json",
     "export-tencent-vdb": "node ./bin/export-tencent-vdb.mjs",
-    "build:read-local-memory": "tsc --project scripts/read-local-memory/tsconfig.json",
+    "build:read-local-memory": "node init && tsc --project scripts/read-local-memory/tsconfig.json",
     "read-local-memory": "node ./bin/read-local-memory.mjs",
-    "build:seed-v2": "tsc --project scripts/seed-v2/tsconfig.json",
+    "build:seed-v2": "node init && tsc --project scripts/seed-v2/tsconfig.json",
     "seed-v2": "node ./bin/seed-v2.mjs",
     "test": "vitest run",
     "test:oss": "vitest run -c vitest.oss.config.ts",

@@ -5,7 +5,6 @@ node_modules/
 workspace/
 
 # Environment variables
-.env
 
 # Test caches
 __tests__/soak/.model-cache/
@@ -57,7 +56,6 @@ sdk/python/*.egg-info/
 .vite/
 
 # Environment (already covered above, explicit for clarity)
-.env.*
 !.env.example
 
 # offload_server 真值配置（含 tdai kernel Bearer），按 .example 自建
@@ -121,3 +119,7 @@ data/tdai-memory.db
 # Test coverage output
 coverage/
 **/coverage/
+branch_structure.json
+temp_auto_push.bat
+temp_interactive_push.bat
+config.bat

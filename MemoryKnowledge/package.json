@@ -1,7 +1,7 @@
 {
   "name": "@tencentdb-agent-memory/knowledge-service",
   "version": "0.1.0",
-  "description": "Standalone knowledge service — Code-Graph + LLM-Wiki engine for user-side deployment",
+  "description": "Standalone knowledge service \u2014 Code-Graph + LLM-Wiki engine for user-side deployment",
   "type": "module",
   "main": "./dist/server.js",
   "bin": {
@@ -9,9 +9,9 @@
     "knowledge-mcp": "./bin/mcp.mjs"
   },
   "scripts": {
-    "dev": "tsx src/server.ts",
-    "dev:mcp": "tsx src/mcp/server.ts",
-    "build": "tsdown",
+    "dev": "node init && tsx src/server.ts",
+    "dev:mcp": "node init && tsx src/mcp/server.ts",
+    "build": "node init && tsdown",
     "test": "vitest run",
     "test:watch": "vitest",
     "test:coverage": "vitest run --coverage",
